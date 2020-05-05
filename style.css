@@ -35,7 +35,7 @@ html, body {
   justify-content: center;
   background-color: #F8F8F1;
 }
-.map__heading {
+.map__reset {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
