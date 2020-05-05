@@ -7,7 +7,7 @@ html, body {
 }
 
 .button {
-  margin: 2px;
+  margin: 0 px;
   background-color: #e7e7e7;
   color: black !important;
   border: none;
@@ -38,7 +38,63 @@ html, body {
 .map__heading {
   position: absolute;
   bottom: 1rem;
+  left: 1rem;
+  font-size: 1.75rem;
+  background-color: rgba(0, 0, 100, 0.59);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.map__rotate-left {
+  position: absolute;
+  top: 1rem;
   right: 1rem;
+  font-size: 1.75rem;
+  background-color: rgba(0, 0, 100, 0.59);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.map__rotate-right {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.75rem;
+  background-color: rgba(0, 0, 100, 0.59);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.map__zoom-in {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.75rem;
+  background-color: rgba(0, 0, 100, 0.59);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.map__zoom-out {
+  position: absolute;
+  bottom: 1rem;
+  right: 4rem;
   font-size: 1.75rem;
   background-color: rgba(0, 0, 100, 0.59);
   color: #fff;
@@ -64,8 +120,8 @@ html, body {
   bottom: 0;
   right: 0;
   will-change: transform;
-  transform-origin: center;
-  transition: transform 300ms ease;
+  transform-origin: update;
+  transition: transform 150ms ease;
 }
 .map__svg {
   object-fit: contain;
