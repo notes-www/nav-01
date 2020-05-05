@@ -20,11 +20,11 @@ function returnTransform(scale, left,top,rotation){
   var currentLeft = 0;
   var currentTop = 0;
   var currentRotation = 0;
-  
-  var buttonRotationChange =15
+
+  var buttonRotationChange =30
   var adjustRotation =0 ;
   var rotationSensibility=100;
-  
+
   // zoom
   mc.get("pinch").set({ enable: true });
   mc.get('rotate').set({ enable: true });
@@ -54,7 +54,7 @@ function returnTransform(scale, left,top,rotation){
     currentLeft = currentLeft + ev.deltaX / currentScale;
     currentTop = currentTop + ev.deltaY / currentScale;
   });
-  
+
   //Rotate function
   mc.on("rotatestart", function(e) {
     //el.style.transformOrigin= currentLeft+"px "+currentTop+"px";
@@ -70,7 +70,7 @@ function returnTransform(scale, left,top,rotation){
   //reset button
   mc.on("doubletap",function(e) {
     console.log(e.center);
-    currentScale = currentScale*1.3;
+    currentScale = currentScale*2;
     el.style.transform = returnTransform(currentScale, currentLeft,currentTop, currentRotation);
       });
   document.getElementById("resetMap").addEventListener("click", function() {
@@ -83,13 +83,13 @@ function returnTransform(scale, left,top,rotation){
   });
 document.getElementById("zoomIn").addEventListener("click", function() {
     console.log("zoomIn");
-    currentScale = currentScale*1.3;
+    currentScale = currentScale*1.6;
     el.style.transform =
       returnTransform(currentScale, currentLeft,currentTop, currentRotation);
   });
   document.getElementById("zoomOut").addEventListener("click", function() {
     console.log("zoomOut");
-    currentScale=currentScale*0.7;
+    currentScale=currentScale*0.5;
     el.style.transform =
       returnTransform(currentScale, currentLeft,currentTop, currentRotation);
   });

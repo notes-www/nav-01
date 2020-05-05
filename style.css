@@ -33,12 +33,12 @@ html, body {
   height: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: #F8F8F1;
 }
 .map__heading {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  bottom: 1rem;
+  right: 1rem;
   font-size: 1.75rem;
   background-color: rgba(0, 0, 100, 0.59);
   color: #fff;
